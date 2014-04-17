@@ -203,9 +203,6 @@
                     [self prepareImageViewController:segue.destinationViewController
                                       toDisplayPhoto:self.photoSectionIDs[indexPath.row]];
                    
-             //       AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-             //       NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-             //       [ud setObject:myDelegate.photos forKey:@"history"];
                 }
                 
             }

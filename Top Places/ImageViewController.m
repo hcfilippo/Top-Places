@@ -127,7 +127,6 @@
 
 #pragma mark - UISplitViewControllerDelegate
 
-// this section added during Shutterbug demo
 
 - (void)awakeFromNib
 {
