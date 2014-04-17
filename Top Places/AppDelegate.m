@@ -10,6 +10,19 @@
 
 @implementation AppDelegate
 
+@synthesize photos;
+
+
+- (NSMutableArray *)photos
+{
+    if (!photos) {
+        photos = [[NSMutableArray alloc] initWithCapacity:20];
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        photos = [ud objectForKey:@"history"];
+    }
+    return photos;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
