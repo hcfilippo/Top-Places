@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotosTVC.h"
 
-@interface RecentPhotoTableViewController : UITableViewController
-@property (nonatomic, strong) NSArray *photos; // of Flickr recently viewed photos NSDictionary
+@interface RecentPhotoTableViewController : PhotosTVC
+
 @end

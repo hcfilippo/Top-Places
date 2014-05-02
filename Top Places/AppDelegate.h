@@ -11,5 +11,5 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (retain, nonatomic) NSMutableArray *photos;
+@property (retain, nonatomic) UIManagedDocument *document;
 @end

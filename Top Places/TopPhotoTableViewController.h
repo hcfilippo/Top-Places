@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Place.h"
+#import "PhotosTVC.h"
 
-@interface TopPhotoTableViewController : UITableViewController
-@property (nonatomic, strong) NSArray *photos; // of Flickr photos NSDictionary
-@property (nonatomic, strong) id placeID;
-@property (nonatomic, strong) NSMutableArray * photoSectionIDs;
+@interface TopPhotoTableViewController : PhotosTVC
+@property (nonatomic, strong) Place *place;
 @end

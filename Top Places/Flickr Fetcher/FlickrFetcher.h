@@ -28,6 +28,7 @@
 #define FLICKR_LONGITUDE @"longitude"
 #define FLICKR_TAGS @"tags"
 
+
 typedef enum {
 	FlickrPhotoFormatSquare = 1,    // thumbnail
 	FlickrPhotoFormatLarge = 2,     // normal size

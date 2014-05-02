@@ -6,12 +6,11 @@
 //  Copyright (c) 2013 Stanford University. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CoreDataTableViewController.h"
 
-@interface FlickrPhotosTVC : UITableViewController
+@interface FlickrPhotosTVC : CoreDataTableViewController
 
-// Model of this MVC (it can be publicly set)
-@property (nonatomic, strong) NSArray *places; // of Flickr places NSDictionary
-@property (nonatomic, strong) NSMutableDictionary *countries;
-@property (nonatomic, strong) NSMutableArray * countrySectionIDs;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+
 @end
