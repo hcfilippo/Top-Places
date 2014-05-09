@@ -1,5 +1,5 @@
 //
-//  FlickrPhotosTVC.h
+//  TopPlacesTableViewController.h
 //  Shutterbug
 //
 //  Created by CS193p Instructor.
@@ -8,7 +8,7 @@
 
 #import "CoreDataTableViewController.h"
 
-@interface FlickrPhotosTVC : CoreDataTableViewController
+@interface TopPlacesTableViewController : CoreDataTableViewController
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

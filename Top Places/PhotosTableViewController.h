@@ -1,5 +1,5 @@
 //
-//  PhotosTVC.h
+//  PhotosTableViewController.h
 //  Top Places
 //
 //  Created by hcfilippo on 14-5-2.
@@ -8,6 +8,6 @@
 
 #import "CoreDataTableViewController.h"
 
-@interface PhotosTVC : CoreDataTableViewController
+@interface PhotosTableViewController : CoreDataTableViewController
 
 @end

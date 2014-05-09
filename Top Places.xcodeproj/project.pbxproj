@@ -15,14 +15,12 @@
 		42223DA818FE67C500FBD217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DA718FE67C500FBD217 /* AppDelegate.m */; };
 		42223DAB18FE67C500FBD217 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42223DA918FE67C500FBD217 /* Main_iPhone.storyboard */; };
 		42223DAE18FE67C500FBD217 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42223DAC18FE67C500FBD217 /* Main_iPad.storyboard */; };
-		42223DB118FE67C500FBD217 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DB018FE67C500FBD217 /* ViewController.m */; };
-		42223DB318FE67C500FBD217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42223DB218FE67C500FBD217 /* Images.xcassets */; };
 		42223DBA18FE67C500FBD217 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42223DB918FE67C500FBD217 /* XCTest.framework */; };
 		42223DBB18FE67C500FBD217 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42223D9718FE67C500FBD217 /* Foundation.framework */; };
 		42223DBC18FE67C500FBD217 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42223D9B18FE67C500FBD217 /* UIKit.framework */; };
 		42223DC418FE67C500FBD217 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42223DC218FE67C500FBD217 /* InfoPlist.strings */; };
 		42223DC618FE67C500FBD217 /* Top_PlacesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DC518FE67C500FBD217 /* Top_PlacesTests.m */; };
-		42223DD518FE683400FBD217 /* FlickrPhotosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DD018FE683400FBD217 /* FlickrPhotosTVC.m */; };
+		42223DD518FE683400FBD217 /* TopPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DD018FE683400FBD217 /* TopPlacesTableViewController.m */; };
 		42223DD718FE683400FBD217 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DD418FE683400FBD217 /* ImageViewController.m */; };
 		42223DDC18FE686B00FBD217 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DDB18FE686B00FBD217 /* FlickrFetcher.m */; };
 		42223DDF18FEB4F000FBD217 /* TopPhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223DDE18FEB4F000FBD217 /* TopPhotoTableViewController.m */; };
@@ -35,7 +33,10 @@
 		424921131913ACE80068B6DE /* Photographer.m in Sources */ = {isa = PBXBuildFile; fileRef = 424921121913ACE80068B6DE /* Photographer.m */; };
 		424921161913B0F90068B6DE /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 424921151913B0F90068B6DE /* Place.m */; };
 		424921191913D3C10068B6DE /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 424921181913D3C10068B6DE /* Photo.m */; };
-		4249211C1913D6150068B6DE /* PhotosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4249211B1913D6150068B6DE /* PhotosTVC.m */; };
+		4249211C1913D6150068B6DE /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4249211B1913D6150068B6DE /* PhotosTableViewController.m */; };
+		42A5D76D191B949B00C312F4 /* AppTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A5D76C191B949B00C312F4 /* AppTabBarViewController.m */; };
+		42A5D76F191B9BDF00C312F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A5D76E191B9BDF00C312F4 /* Images.xcassets */; };
+		51B1A14F711D465998E65E43 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0B42D993CF4B84844683E8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +62,13 @@
 		42223DA718FE67C500FBD217 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		42223DAA18FE67C500FBD217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		42223DAD18FE67C500FBD217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		42223DAF18FE67C500FBD217 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		42223DB018FE67C500FBD217 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		42223DB218FE67C500FBD217 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42223DB818FE67C500FBD217 /* Top PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Top PlacesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42223DB918FE67C500FBD217 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		42223DC118FE67C500FBD217 /* Top PlacesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Top PlacesTests-Info.plist"; sourceTree = "<group>"; };
 		42223DC318FE67C500FBD217 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42223DC518FE67C500FBD217 /* Top_PlacesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Top_PlacesTests.m; sourceTree = "<group>"; };
-		42223DCF18FE683400FBD217 /* FlickrPhotosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotosTVC.h; sourceTree = "<group>"; };
-		42223DD018FE683400FBD217 /* FlickrPhotosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotosTVC.m; sourceTree = "<group>"; };
+		42223DCF18FE683400FBD217 /* TopPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPlacesTableViewController.h; sourceTree = "<group>"; };
+		42223DD018FE683400FBD217 /* TopPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPlacesTableViewController.m; sourceTree = "<group>"; };
 		42223DD318FE683400FBD217 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		42223DD418FE683400FBD217 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		42223DD918FE686B00FBD217 /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
@@ -96,8 +94,13 @@
 		424921151913B0F90068B6DE /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Model/Place.m; sourceTree = "<group>"; };
 		424921171913D3C10068B6DE /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Model/Photo.h; sourceTree = "<group>"; };
 		424921181913D3C10068B6DE /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Model/Photo.m; sourceTree = "<group>"; };
-		4249211A1913D6150068B6DE /* PhotosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTVC.h; sourceTree = "<group>"; };
-		4249211B1913D6150068B6DE /* PhotosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTVC.m; sourceTree = "<group>"; };
+		4249211A1913D6150068B6DE /* PhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTableViewController.h; sourceTree = "<group>"; };
+		4249211B1913D6150068B6DE /* PhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTableViewController.m; sourceTree = "<group>"; };
+		42A5D76B191B949B00C312F4 /* AppTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTabBarViewController.h; sourceTree = "<group>"; };
+		42A5D76C191B949B00C312F4 /* AppTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTabBarViewController.m; sourceTree = "<group>"; };
+		42A5D76E191B9BDF00C312F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62BE29AD4BE441A9BE25A570 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6B0B42D993CF4B84844683E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 				42223D9A18FE67C500FBD217 /* CoreGraphics.framework in Frameworks */,
 				42223D9C18FE67C500FBD217 /* UIKit.framework in Frameworks */,
 				42223D9818FE67C500FBD217 /* Foundation.framework in Frameworks */,
+				51B1A14F711D465998E65E43 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,7 @@
 				42223DBF18FE67C500FBD217 /* Top PlacesTests */,
 				42223D9618FE67C500FBD217 /* Frameworks */,
 				42223D9518FE67C500FBD217 /* Products */,
+				62BE29AD4BE441A9BE25A570 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +155,7 @@
 				42223D9918FE67C500FBD217 /* CoreGraphics.framework */,
 				42223D9B18FE67C500FBD217 /* UIKit.framework */,
 				42223DB918FE67C500FBD217 /* XCTest.framework */,
+				6B0B42D993CF4B84844683E8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,17 +173,17 @@
 				42223DDE18FEB4F000FBD217 /* TopPhotoTableViewController.m */,
 				42223DE018FF973A00FBD217 /* RecentPhotoTableViewController.h */,
 				42223DE118FF973A00FBD217 /* RecentPhotoTableViewController.m */,
-				4249211A1913D6150068B6DE /* PhotosTVC.h */,
-				4249211B1913D6150068B6DE /* PhotosTVC.m */,
-				42223DCF18FE683400FBD217 /* FlickrPhotosTVC.h */,
-				42223DD018FE683400FBD217 /* FlickrPhotosTVC.m */,
+				4249211A1913D6150068B6DE /* PhotosTableViewController.h */,
+				4249211B1913D6150068B6DE /* PhotosTableViewController.m */,
+				42223DCF18FE683400FBD217 /* TopPlacesTableViewController.h */,
+				42223DD018FE683400FBD217 /* TopPlacesTableViewController.m */,
 				42223DD318FE683400FBD217 /* ImageViewController.h */,
 				42223DD418FE683400FBD217 /* ImageViewController.m */,
 				42223DA918FE67C500FBD217 /* Main_iPhone.storyboard */,
 				42223DAC18FE67C500FBD217 /* Main_iPad.storyboard */,
-				42223DAF18FE67C500FBD217 /* ViewController.h */,
-				42223DB018FE67C500FBD217 /* ViewController.m */,
-				42223DB218FE67C500FBD217 /* Images.xcassets */,
+				42A5D76E191B9BDF00C312F4 /* Images.xcassets */,
+				42A5D76B191B949B00C312F4 /* AppTabBarViewController.h */,
+				42A5D76C191B949B00C312F4 /* AppTabBarViewController.m */,
 				42223D9E18FE67C500FBD217 /* Supporting Files */,
 			);
 			path = "Top Places";
@@ -258,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42223DC918FE67C500FBD217 /* Build configuration list for PBXNativeTarget "Top Places" */;
 			buildPhases = (
+				EDFCF806B77A42E088B03973 /* Check Pods Manifest.lock */,
 				42223D9018FE67C500FBD217 /* Sources */,
 				42223D9118FE67C500FBD217 /* Frameworks */,
 				42223D9218FE67C500FBD217 /* Resources */,
+				BFE0FA3FE6E343B19BC51682 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42223DAE18FE67C500FBD217 /* Main_iPad.storyboard in Resources */,
-				42223DB318FE67C500FBD217 /* Images.xcassets in Resources */,
+				42A5D76F191B9BDF00C312F4 /* Images.xcassets in Resources */,
 				42223DAB18FE67C500FBD217 /* Main_iPhone.storyboard in Resources */,
 				42223DA218FE67C500FBD217 /* InfoPlist.strings in Resources */,
 			);
@@ -351,24 +359,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BFE0FA3FE6E343B19BC51682 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDFCF806B77A42E088B03973 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42223D9018FE67C500FBD217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A5D76D191B949B00C312F4 /* AppTabBarViewController.m in Sources */,
 				42223DD718FE683400FBD217 /* ImageViewController.m in Sources */,
 				424920D4191328020068B6DE /* Place+Create.m in Sources */,
 				424920D7191328430068B6DE /* Photographer+Create.m in Sources */,
 				42223DDC18FE686B00FBD217 /* FlickrFetcher.m in Sources */,
 				4249200E1911EAF90068B6DE /* CoreDataTableViewController.m in Sources */,
 				42223DE218FF973A00FBD217 /* RecentPhotoTableViewController.m in Sources */,
-				42223DB118FE67C500FBD217 /* ViewController.m in Sources */,
 				424921161913B0F90068B6DE /* Place.m in Sources */,
 				42223DDF18FEB4F000FBD217 /* TopPhotoTableViewController.m in Sources */,
-				42223DD518FE683400FBD217 /* FlickrPhotosTVC.m in Sources */,
+				42223DD518FE683400FBD217 /* TopPlacesTableViewController.m in Sources */,
 				424920371911F66F0068B6DE /* Model.xcdatamodeld in Sources */,
 				424921131913ACE80068B6DE /* Photographer.m in Sources */,
-				4249211C1913D6150068B6DE /* PhotosTVC.m in Sources */,
+				4249211C1913D6150068B6DE /* PhotosTableViewController.m in Sources */,
 				424921191913D3C10068B6DE /* Photo.m in Sources */,
 				424920D1191328020068B6DE /* Photo+Flickr.m in Sources */,
 				42223DA818FE67C500FBD217 /* AppDelegate.m in Sources */,
@@ -504,6 +545,7 @@
 		};
 		42223DCA18FE67C500FBD217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62BE29AD4BE441A9BE25A570 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -517,6 +559,7 @@
 		};
 		42223DCB18FE67C500FBD217 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62BE29AD4BE441A9BE25A570 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

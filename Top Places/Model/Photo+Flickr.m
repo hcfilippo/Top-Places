@@ -12,6 +12,8 @@
 #import "Photographer+Create.h"
 #import "AppDelegate.h"
 #import "PhotoDatabaseAvailability.h"
+#import <AFNetworking/AFNetworking.h>
+
 
 @implementation Photo (Flickr)
 
@@ -32,7 +34,10 @@
     } else if ([matches count]) {
         photo = [matches firstObject];
     } else {
+ 
+        [self fetchPlacewithPhoto:photo withPhotoDictionary:photoDictionary];
         
+/*
         NSString *placeID = [photoDictionary valueForKeyPath:FLICKR_PLACE_ID];
         NSString *owner = [photoDictionary valueForKeyPath:FLICKR_PHOTO_OWNER];
         NSURL *url = [FlickrFetcher URLforInformationAboutPlace:placeID];
@@ -74,9 +79,53 @@
             });
             
         });
-      //  [[NSNotificationCenter defaultCenter] postNotificationName:PhotoDatabaseAvailabilityNotification object:self];
+*/
+ 
     }
     return photo;
+}
+
+
++ (void)fetchPlacewithPhoto:(Photo *)photo withPhotoDictionary:(NSDictionary *)photoDictionary
+{
+    NSString *photoID = photoDictionary[FLICKR_PHOTO_ID];
+    NSString *placeID = [photoDictionary valueForKeyPath:FLICKR_PLACE_ID];
+    NSString *owner = [photoDictionary valueForKeyPath:FLICKR_PHOTO_OWNER];
+    NSURL *url = [FlickrFetcher URLforInformationAboutPlace:placeID];
+
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *propertyListResults =  (NSDictionary *)responseObject;
+        NSString *region = [FlickrFetcher extractRegionNameFromPlaceInformation:propertyListResults];
+        if (!region) {
+            region =@"Unknown";
+        }
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = myDelegate.document.managedObjectContext;
+        Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:context];
+        
+        photo.photoID = photoID;
+        photo.title = [photoDictionary valueForKeyPath:FLICKR_PHOTO_TITLE];
+        photo.subtitle = [photoDictionary valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+        photo.thumbnailURL = [[FlickrFetcher URLforPhoto:photoDictionary format:FlickrPhotoFormatSquare] absoluteString];
+        photo.imageURL = [[FlickrFetcher URLforPhoto:photoDictionary format:FlickrPhotoFormatLarge] absoluteString];
+        photo.thumbnailImage = nil;
+        photo.viewDate = nil;
+        photo.whoTook = [Photographer photographerWithName:owner
+                                                 withPlace:region
+                                    inManagedObjectContext:context];
+        photo.whereTook = [Place photoAddPlaceWithName:region
+                                inManagedObjectContext:context];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+       // NSLog(@"Fetching Place Name Failure: -- %@", error);
+        [self fetchPlacewithPhoto:photo withPhotoDictionary:photoDictionary];
+    }];
+    [operation start];
 }
 
 

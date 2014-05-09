@@ -1,12 +1,12 @@
 //
-//  FlickrPhotosTVC.m
+//  TopPlacesTableViewController.m
 //  Shutterbug
 //
 //  Created by CS193p Instructor.
 //  Copyright (c) 2013 Stanford University. All rights reserved.
 //
 
-#import "FlickrPhotosTVC.h"
+#import "TopPlacesTableViewController.h"
 #import "FlickrFetcher.h"
 #import "TopPhotoTableViewController.h"
 #import "AppDelegate.h"
@@ -15,7 +15,7 @@
 #import "AppDelegate.h"
 
 
-@implementation FlickrPhotosTVC
+@implementation TopPlacesTableViewController
 
 // whenever our Model is set, must update our View
 
@@ -88,6 +88,7 @@
     
     Place *place = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = place.name;
+    cell.detailTextLabel.textColor = [UIColor blueColor];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ photographers %@ photos",place.countPhotographers, place.countPhotos];
     return cell;
 }

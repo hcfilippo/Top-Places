@@ -19,4 +19,7 @@
 + (Photo *)photoWithID:(NSString *)photoID
         inManagedObjectContext:(NSManagedObjectContext *)context;
 
++ (void)fetchPlacewithPhoto:(Photo *)photo
+        withPhotoDictionary:(NSDictionary *)photoDictionary;
+
 @end

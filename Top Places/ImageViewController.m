@@ -7,6 +7,7 @@
 //
 
 #import "ImageViewController.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface ImageViewController () <UIScrollViewDelegate, UISplitViewControllerDelegate>
 @property (nonatomic, strong) UIImageView *imageView;
@@ -98,31 +99,37 @@
     if (self.imageURL)
     {
         [self.spinner startAnimating];
-
+        
         NSURLRequest *request = [NSURLRequest requestWithURL:self.imageURL];
-        
-        // another configuration option is backgroundSessionConfiguration (multitasking API required though)
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            if ([request.URL isEqual:self.imageURL]) {
+                NSData *imageData = (NSData *)responseObject;
+                self.image = [UIImage imageWithData:imageData];
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Fetching Large Image Failure: -- %@", error);
+        }];
+        [operation start];
+/*
+        NSURLRequest *request = [NSURLRequest requestWithURL:self.imageURL];
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-        
-        // create the session without specifying a queue to run completion handler on (thus, not main queue)
-        // we also don't specify a delegate (since completion handler is all we need)
         NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-
         NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request
             completionHandler:^(NSURL *localfile, NSURLResponse *response, NSError *error) {
-                // this handler is not executing on the main queue, so we can't do UI directly here
                 if (!error) {
                     if ([request.URL isEqual:self.imageURL]) {
-                        // UIImage is an exception to the "can't do UI here"
                         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:localfile]];
-                        // but calling "self.image =" is definitely not an exception to that!
-                        // so we must dispatch this back to the main queue
                         dispatch_async(dispatch_get_main_queue(), ^{ self.image = image; });
                     }
                 }
         }];
-        [task resume]; // don't forget that all NSURLSession tasks start out suspended!
+        [task resume];
+*/
+ 
+ 
     }
+ 
 }
 
 #pragma mark - UISplitViewControllerDelegate
